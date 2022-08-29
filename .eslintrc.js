@@ -18,5 +18,6 @@ module.exports = {
     "no-alert": "off",
     "no-plusplus": "off",
     "no-param-reassign": 0,
+    "no-useless-escape": "off",
   },
 };
