@@ -2,13 +2,13 @@
 // количество минут, прошедшее с начала сегодняшнего
 // дня.
 
-export function getMinutsToday() {
-  const now = new Date();
-  const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
-  const diff = now - today;
-  const result = Math.round(diff / 1000 / 60);
-  console.log(result);
-}
+// export function getMinutsToday() {
+//   const now = new Date();
+//   const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+//   const diff = now - today;
+//   const result = Math.round(diff / 1000 / 60);
+//   console.log(result);
+// }
 
 // export function getMinutsToday(day) {
 //     let currentDay = Date.parse(day);
@@ -23,3 +23,13 @@ export function getMinutsToday() {
 //      let result = Math.round(diff / 1000 / 60);
 //      console.log(result);
 //    }
+
+export function getMinutsToday() {
+  const now = new Date(Date.now());
+
+  const hours = now.getHours();
+  const minutes = now.getMinutes();
+  const minutesPass = hours * 60 + minutes;
+
+  console.log(minutesPass);
+}
