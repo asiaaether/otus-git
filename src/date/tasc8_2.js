@@ -29,7 +29,7 @@ export function getMinutsToday() {
 
   const hours = now.getHours();
   const minutes = now.getMinutes();
-  const minutesPass = hours * 60 + minutes - 180;
+  const minutesPass = hours * 60 + minutes;
 
   console.log(minutesPass);
 }
