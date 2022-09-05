@@ -10,7 +10,11 @@ describe("addAgeToUser", () => {
       input: "31",
       result: { name: "John", age: "31" },
     },
-    { user: { name: "Sam" }, input: "55", result: { name: "Sam", age: "55" } },
+    {
+      user: { name: "Sam" },
+      input: "55",
+      result: { name: "Sam", age: "55" },
+    },
     {
       user: { name: "Tony" },
       input: "32",

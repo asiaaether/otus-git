@@ -1,3 +1,5 @@
+import { addAgeToUser } from "./tasc4_1";
+import { createAdmin } from "./tasc4_2";
 // Создайте объект user, содержащий поле name со значением ‘John’.
 // const user = {
 //     name: "John",
@@ -6,6 +8,8 @@
 // отдельные переменные. Имена переменных
 // должны совпадать с названиями полей.
 export function getProps(obj) {
-  const { name, role } = obj;
-  return [name, role];
+  const user = addAgeToUser(obj);
+  const admin = createAdmin(user);
+  const { name, age, role } = admin;
+  return [name, age, role];
 }

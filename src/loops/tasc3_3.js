@@ -5,10 +5,8 @@
 export function fun() {
   const arr = [];
   const input = +prompt("enter a number", 10);
-  for (let i = 1; i <= input; i++) {
-    if (i % 2 !== 0) {
-      arr.push(i);
-    }
+  for (let i = 1; i <= input; i += 2) {
+    arr.push(i);
   }
   const result = arr.reduce((sum, el) => sum + el) / arr.length;
   console.log(result);

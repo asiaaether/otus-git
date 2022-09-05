@@ -4,7 +4,7 @@
 // нескольких.
 
 export function isWord(str) {
-  str = str.split(" ");
+  str = str.trim().split(" ");
   const result = str.length === 1;
   return result;
 }

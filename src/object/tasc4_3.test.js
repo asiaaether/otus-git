@@ -5,9 +5,25 @@ describe("getProps", () => {
     jest.clearAllMocks();
   });
   [
-    { obj: { name: "admin", role: "admin" }, result: ["admin", "admin"] },
-  ].forEach(({ obj, result }) => {
-    it("returns new object admin", () => {
+    {
+      obj: { name: "John" },
+      input: "31",
+      result: ["John", "31", "admin"],
+    },
+    {
+      obj: { name: "Sam" },
+      input: "55",
+      result: ["Sam", "55", "admin"],
+    },
+    {
+      obj: { name: "Tony" },
+      input: "32",
+      result: ["Tony", "32", "admin"],
+    },
+  ].forEach(({ obj, input, result }) => {
+    it("returns properties of object", () => {
+      jest.spyOn(window, "prompt").mockImplementation(() => input);
+
       expect(getProps(obj)).toEqual(result);
     });
   });

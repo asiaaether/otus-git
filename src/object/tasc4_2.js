@@ -8,6 +8,6 @@
 // ‘admin’.
 
 export function createAdmin(obj) {
-  const admin = { ...obj, name: "admin", role: "admin"};
+  const admin = { ...obj, role: "admin" };
   return admin;
 }
